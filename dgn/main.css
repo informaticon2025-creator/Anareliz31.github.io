@@ -1,0 +1,810 @@
+/* ==========================================
+   MASTER PRO STYLESHEET - RED, WHITE & BLACK
+   ========================================== */
+
+:root {
+    --brand-red: #e50914;
+    --brand-red-hover: #ff1e27;
+    --brand-red-glow: rgba(229, 9, 20, 0.4);
+    
+    --bg-black: #080808;
+    --bg-dark-surface: #121212;
+    --bg-card: #ffffff;
+    --bg-light: #f4f5f7;
+    
+    --text-dark: #111111;
+    --text-muted: #666666;
+    --text-white: #ffffff;
+    --text-white-muted: #aaaaaa;
+    
+    --border-light: rgba(0, 0, 0, 0.08);
+    --border-dark: rgba(255, 255, 255, 0.12);
+    
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 24px;
+    
+    --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --shadow-pro: 0 12px 30px rgba(0, 0, 0, 0.12);
+    --shadow-red: 0 8px 24px rgba(229, 9, 20, 0.35);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================
+   1. NAV BAR FIXED PRO
+   ========================================== */
+.app-top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(8, 8, 8, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--brand-red);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0.75rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.app-logo {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(229, 9, 20, 0.6));
+    transition: transform var(--transition);
+}
+
+.logo-container:hover .app-logo {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.brand-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-weight: 900;
+    font-size: 1.3rem;
+    letter-spacing: 0.8px;
+    color: var(--text-white);
+    text-transform: uppercase;
+}
+
+.brand-tagline {
+    font-size: 0.65rem;
+    color: var(--brand-red);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-item {
+    color: var(--text-white-muted);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.55rem 1.1rem;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition);
+}
+
+.nav-item:hover {
+    color: var(--text-white);
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.nav-item.active {
+    color: var(--text-white);
+    background-color: var(--brand-red);
+    box-shadow: var(--shadow-red);
+}
+
+.cart-btn {
+    border: 1px solid var(--border-dark);
+}
+
+/* ==========================================
+   2. DRAWER MÓVIL (CORREGIDO Y VISIBLE)
+   ========================================== */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-white);
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: var(--radius-sm);
+    transition: background-color var(--transition);
+}
+
+.hamburger-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    z-index: 1900;
+    transition: opacity var(--transition);
+    z-index: 0;
+}
+
+.drawer-overlay.hidden {
+    display: none;
+}
+
+.mobile-drawer-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 45%;
+    min-width: 220px;
+    height: 100vh;
+    background-color: #ffffff;
+    border-left: 3px solid var(--brand-red);
+    box-shadow: -8px 0 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    z-index: 100000;
+    transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-drawer-menu.open {
+    right: 0;
+}
+
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1rem;
+    background-color: var(--bg-black);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1rem;
+    border-bottom: 2px solid var(--brand-red);
+}
+
+#drawer-close-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.drawer-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+}
+
+.drawer-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    color: #111111;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: left;
+    transition: all var(--transition);
+}
+
+.drawer-item svg {
+    stroke: var(--brand-red);
+}
+
+.drawer-item:hover, .drawer-item:active {
+    background-color: var(--brand-red);
+    color: #ffffff;
+    padding-left: 1.5rem;
+}
+
+.drawer-item:hover svg, .drawer-item:active svg {
+    stroke: #ffffff;
+}
+
+/* ==========================================
+   3. HEADER PRO AMPLIO
+   ========================================== */
+.app-header.beach-kiosk-hero {
+    position: relative;
+    width: 100%;
+    margin-top: 65px;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: var(--bg-black);
+    background-image: 
+        radial-gradient(circle at 80% 20%, rgba(229, 9, 20, 0.205) 0%, transparent 40%),
+        linear-gradient(180deg, rgba(8, 8, 8, 0.719) 0%, rgba(17, 13, 13, 0.973) 100%),
+        url('https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/482359490_665976572780428_8961123623980870853_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x565&ctp=s1080x565&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0Sca3JSN2sUQ7kNvwHQsPkY&_nc_oc=AdoFrUvFx1hkp3izIk-weH-Y_axGTAJi9rnD2Mt6UN3EBJz9g8O39oHnQbAvyx-bPUU&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=04dcXZ1fbOySNV2jCO81DA&_nc_ss=7b2a8&oh=00_AQG2RkYXPPUemyUNA9mWlZUcZ5wwYuKGzQSYb3wobEXomg&oe=6A9118D5');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    border-bottom: 3px solid var(--brand-red);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.header-hero-content {
+    max-width: 1300px;
+    width: 100%;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 2;
+}
+
+.hero-badge {
+    background-color: var(--brand-red);
+    color: var(--text-white);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 0.35rem 0.9rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 0.85rem;
+    box-shadow: var(--shadow-red);
+}
+
+.hero-title {
+    color: var(--text-white);
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1.1;
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.9);
+    margin-bottom: 0.6rem;
+}
+
+.hero-subtitle {
+    color: var(--text-white-muted);
+    font-size: 1.1rem;
+    max-width: 620px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    line-height: 1.5;
+}
+
+/* ==========================================
+   4. MAIN PRO LAYOUT
+   ========================================== */
+.app-main {
+    flex: 1;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+}
+
+.content-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.75rem;
+}
+
+.article-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.article-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-pro);
+    border-color: rgba(229, 9, 20, 0.3);
+}
+
+.article-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    margin: 0.75rem 0;
+}
+
+.article-card h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.article-card p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+.btn-shop {
+    background-color: var(--brand-red);
+    color: var(--text-white);
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 1.25rem;
+    width: 100%;
+    transition: all var(--transition);
+    box-shadow: var(--shadow-red);
+}
+
+.btn-shop:hover {
+    background-color: var(--brand-red-hover);
+    transform: scale(1.02);
+}
+
+/* Sidebar */
+.sidebar-card {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    padding: 1.75rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-dark);
+    position: sticky;
+    top: 90px;
+    box-shadow: var(--shadow-pro);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.pulse-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: var(--brand-red);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--brand-red);
+}
+
+.sidebar-card h3 {
+    font-size: 1.15rem;
+}
+
+/* ==========================================
+   5. FOOTER PRO
+   ========================================== */
+.app-footer {
+    background-color: var(--bg-black);
+    border-top: 1px solid var(--border-dark);
+    color: var(--text-white);
+    margin-top: auto;
+}
+
+.footer-desktop {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-brand p {
+    color: var(--text-white-muted);
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-sm);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-dark);
+    color: var(--text-white-muted);
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+.social-btn:hover {
+    background-color: var(--brand-red);
+    color: var(--text-white);
+    border-color: var(--brand-red);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-red);
+}
+
+.footer-copy {
+    color: var(--text-white-muted);
+    font-size: 0.85rem;
+}
+
+.footer-mobile-nav {
+    display: none;
+}
+
+/* ==========================================
+   6. MODAL PRO
+   ========================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    padding: 1.5rem;
+}
+
+.modal-overlay.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    max-width: 580px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border-light);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: var(--bg-light);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all var(--transition);
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background-color: var(--brand-red);
+    color: var(--text-white);
+}
+
+.modal-article-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.modal-article-detail h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.modal-img-wrapper {
+    width: 100%;
+    height: 260px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-pro);
+}
+
+.modal-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-article-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Biografía */
+.bio-simple-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+}
+
+.bio-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.bio-subtitle {
+    font-size: 0.92rem;
+    color: var(--brand-red);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.map-frame {
+    width: 100%;
+    height: 280px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-pro);
+}
+
+/* Contacto y Botones */
+.contact-dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle-btn {
+    cursor: pointer;
+    background: none;
+    border: 1px solid var(--border-dark);
+}
+
+.contact-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 190px;
+    background-color: var(--bg-black);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-pro);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1100;
+}
+
+.contact-dropdown-menu.hidden {
+    display: none;
+}
+
+.dropdown-option {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-white-muted);
+    text-decoration: none;
+    background: none;
+    border: none;
+    width: 100%;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: all var(--transition);
+}
+
+.dropdown-option:hover {
+    background-color: var(--brand-red);
+    color: var(--text-white);
+}
+
+.mobile-contact-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+}
+
+.mobile-contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.btn-contact-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+.btn-whatsapp-modal {
+    background-color: #25D366;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.btn-phone-modal {
+    background-color: var(--brand-red);
+    color: var(--text-white);
+    box-shadow: var(--shadow-red);
+}
+
+.toast-copy {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--brand-red);
+    color: var(--text-white);
+    padding: 0.8rem 1.4rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.88rem;
+    font-weight: 700;
+    box-shadow: var(--shadow-red);
+    z-index: 4000;
+}
+
+.toast-copy.hidden {
+    display: none;
+}
+
+.toast-copy.show {
+    display: block;
+}
+
+/* ==========================================
+   7. RESPONSIVE MOBILE
+   ========================================== */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 65px;
+    }
+
+    .desktop-nav, .footer-desktop {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+    }
+
+    .app-header.beach-kiosk-hero {
+        margin-top: 60px;
+        min-height: 280px;
+    }
+
+    .header-hero-content {
+        padding: 2.5rem 1.25rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 1.9rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .app-main {
+        padding: 1.25rem 1rem;
+    }
+
+    .footer-mobile-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        background-color: rgba(8, 8, 8, 0.95);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid var(--border-dark);
+        z-index: 1000;
+    }
+
+    .mobile-nav-btn {
+        background: none;
+        border: none;
+        color: var(--text-white-muted);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 0.72rem;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .mobile-nav-btn.active {
+        color: var(--brand-red-hover);
+    }
+}

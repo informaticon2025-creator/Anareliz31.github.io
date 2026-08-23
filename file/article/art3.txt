@@ -1,0 +1,10 @@
+[TITLE]
+Art del Kiosco...
+
+[IMAGE]
+https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/482193018_664856152892470_3802323264030910830_n.jpg?stp=dst-jpg_tt6&cstp=mx674x464&ctp=s674x464&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=uO7IUov5rEwQ7kNvwGXERpi&_nc_oc=AdrSFLtHVPmezUOF3aLABb-KFH-Vmc8puselF3CbozeWr8PDU-Mpe-O5mMfFTCtf_Zk&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=Yyne4FWdTB9s1gnt5_5H0g&_nc_ss=7b2a8&oh=00_AQEDcwPo-sxtbZzXSlr3vK6AfTUkxCk02iRvV1TbdoF_nQ&oe=6A90F984
+[DESCRITION]
+Descriocion del platillo para saber sus y elementos
+
+[SHOP]
+Precio 0.00$
