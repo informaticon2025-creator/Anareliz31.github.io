@@ -109,25 +109,25 @@ window.onload = function() {
 
 <div class="photo-card" style="margin-top: 1rem;">
     <h3>Playas Paradisíacas</h3>
-    <img src="https://scontent-mia3-3.xx.fbcdn.net/v/t39.30808-6/482030136_665334309511321_8102215552408471020_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x565&ctp=s1080x565&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Ar33HOcO66MQ7kNvwGBpVF_&_nc_oc=AdpI1hNBtY6cdJ5fhDL803QI9iCbEWpo6EyiJGIgoOenluPIX8hZl86bd_4s8f-v7XM&_nc_zt=23&_nc_ht=scontent-mia3-3.xx&_nc_gid=pTggzf0s8mUdg_YEeT-DJQ&_nc_ss=7b2a8&oh=00_AQGJv2I7kvJj-wvweejQGiWH9EIbqGDirywNTJqSYvFMqA&oe=6A912A6E" alt="Foto" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+    <img src="file/imgs/ex_kiosko-1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
     <p style="font-size:0.85rem; color:#666; margin-top:0.4rem;">Relájate en la costa de Taguao con las mejores vistas al mar Caribe.</p>
 </div>
 
 <div class="photo-card" style="margin-top: 1rem;">
     <h3>Al Gusto Familia</h3>
-    <img src="https://scontent-mia3-3.xx.fbcdn.net/v/t39.30808-6/482346177_665976526113766_618894808980863182_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x886&ctp=s1080x886&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=50vlKpDgJpYQ7kNvwF4yXt9&_nc_oc=Ado2hISnLzQRtXo8pmC3FJwMez7pNeh7xKEZpGMBAXNPIZbWQhkYbBHwo-rgyg7P9Iw&_nc_zt=23&_nc_ht=scontent-mia3-3.xx&_nc_gid=DqlRHeSHDx_XVorz3YGS1Q&_nc_ss=7b2a8&oh=00_AQEGTOL9ZGwFAKeoEQoV6Cp_cZHnvF_gpnnD6uJLOPu1GQ&oe=6A911343" alt="Foto" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+    <img src="file/imgs/ex_kiosko-2" alt="Foto" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
     <p style="font-size:0.85rem; color:#666; margin-top:0.4rem;">Relájate en la costa de Taguao con las mejores vistas al mar Caribe.</p>
 </div>
 
 <div class="photo-card" style="margin-top: 1rem;">
     <h3>Vista al mar Caribe</h3>
-    <img src="https://scontent-mia3-3.xx.fbcdn.net/v/t39.30808-6/482220221_665334462844639_4821903829319801798_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x766&ctp=s1080x766&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=SnHdtiyvxoAQ7kNvwEjkPNb&_nc_oc=Adqh73Tjevl3BmWAzmh36hLfHZSFXQeSd3f0SmehlwikXTd9nubuRVJ2zSZlQRGHVZ0&_nc_zt=23&_nc_ht=scontent-mia3-3.xx&_nc_gid=Zkm3zDYfHv_smmSYH_G8sA&_nc_ss=7b2a8&oh=00_AQGid9dSxyRVG_c71bBA8AfQFgFVhtsnx7T738q486_6PQ&oe=6A91071E" alt="Foto" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+    <img src="file/imgs/ex_kiosko-3" alt="Foto" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
     <p style="font-size:0.85rem; color:#666; margin-top:0.4rem;">Relájate en la costa de Taguao con las mejores vistas al mar Caribe.</p>
 </div>
 
 <div class="photo-card" style="margin-top: 1rem;">
     <h3>Trae a tus niños</h3>
-    <img src="https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/475916820_640502101994542_3636346361538751096_n.jpg?stp=dst-jpg_tt6&cstp=mx1016x762&ctp=s1016x762&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lqm70t7Nb1IQ7kNvwFwDbi0&_nc_oc=Adpd5N7qFv9hPvpcDDRl4d3aRunofRY4HfSHX6RKZ8oPHRc11tlYJdthfbyC0ZC_ORs&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=RFZRMke6AOwf0pM8WYxT0Q&_nc_ss=7b2a8&oh=00_AQHEsMgP_iABwN66VPt_KdgSQJBBgxeFUquKZ7KfF-spnQ&oe=6A911A8C" alt="Foto" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+    <img src="file/imgs/ex_kiosko-4" alt="Foto" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
     <p style="font-size:0.85rem; color:#666; margin-top:0.4rem;">Relájate en la costa de Taguao con las mejores vistas al mar Caribe.</p>
 </div>
         `;
