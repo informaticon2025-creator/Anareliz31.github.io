@@ -109,25 +109,25 @@ window.onload = function() {
 
 <div class="photo-card" style="margin-top: 1rem;">
     <h3>Playas Paradisíacas</h3>
-    <img src="file/imgs/ex_kiosko-1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+    <img src="file/imgs/ex_kiosko-1.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
     <p style="font-size:0.85rem; color:#666; margin-top:0.4rem;">Relájate en la costa de Taguao con las mejores vistas al mar Caribe.</p>
 </div>
 
 <div class="photo-card" style="margin-top: 1rem;">
     <h3>Al Gusto Familia</h3>
-    <img src="file/imgs/ex_kiosko-2" alt="Foto" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+    <img src="file/imgs/ex_kiosko-2.jpg" alt="Foto" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
     <p style="font-size:0.85rem; color:#666; margin-top:0.4rem;">Relájate en la costa de Taguao con las mejores vistas al mar Caribe.</p>
 </div>
 
 <div class="photo-card" style="margin-top: 1rem;">
     <h3>Vista al mar Caribe</h3>
-    <img src="file/imgs/ex_kiosko-3" alt="Foto" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+    <img src="file/imgs/ex_kiosko-3.jpg" alt="Foto" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
     <p style="font-size:0.85rem; color:#666; margin-top:0.4rem;">Relájate en la costa de Taguao con las mejores vistas al mar Caribe.</p>
 </div>
 
 <div class="photo-card" style="margin-top: 1rem;">
     <h3>Trae a tus niños</h3>
-    <img src="file/imgs/ex_kiosko-4" alt="Foto" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+    <img src="file/imgs/ex_kiosko-4.jpg" alt="Foto" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
     <p style="font-size:0.85rem; color:#666; margin-top:0.4rem;">Relájate en la costa de Taguao con las mejores vistas al mar Caribe.</p>
 </div>
         `;
