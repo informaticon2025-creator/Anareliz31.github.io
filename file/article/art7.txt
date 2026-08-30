@@ -1,0 +1,11 @@
+[TITLE]
+Art del Kiosco...
+
+[IMAGE]
+file/imgs/img-07.jpg
+
+[DESCRITION]
+Descriocion del platillo para saber sus y elementos
+
+[SHOP]
+Precio 0.00$
