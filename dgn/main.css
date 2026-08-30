@@ -272,7 +272,7 @@ body {
     background-image: 
         radial-gradient(circle at 80% 20%, rgba(229, 9, 20, 0.205) 0%, transparent 40%),
         linear-gradient(180deg, rgba(8, 8, 8, 0.719) 0%, rgba(17, 13, 13, 0.973) 100%),
-        url('https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/482359490_665976572780428_8961123623980870853_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x565&ctp=s1080x565&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0Sca3JSN2sUQ7kNvwHQsPkY&_nc_oc=AdoFrUvFx1hkp3izIk-weH-Y_axGTAJi9rnD2Mt6UN3EBJz9g8O39oHnQbAvyx-bPUU&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=04dcXZ1fbOySNV2jCO81DA&_nc_ss=7b2a8&oh=00_AQG2RkYXPPUemyUNA9mWlZUcZ5wwYuKGzQSYb3wobEXomg&oe=6A9118D5');
+        url('/file/imgs/fond.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
